@@ -10,12 +10,9 @@ import dagger.Provides
 
 
 @Module
-class DataModule(private val context:Context) {
+class DataModule {
 
-    @Provides
-    fun provideContext(): Context{
-        return context
-    }
+
 
     @Provides
     fun bindLocalDataSource(impl: ExampleLocalDataSourceImpl): ExampleLocalDataSource {
