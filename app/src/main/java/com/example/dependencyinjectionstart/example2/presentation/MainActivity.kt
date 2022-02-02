@@ -19,10 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         component.inject(this)
-        Log.d("MainAct",component.getViewModel().toString())
-        Log.d("MainAct",component.getViewModel().toString())
-        Log.d("MainAct",component.getDatabase().toString())
-        Log.d("MainAct",component.getDatabase().toString())
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         viewModel.method()

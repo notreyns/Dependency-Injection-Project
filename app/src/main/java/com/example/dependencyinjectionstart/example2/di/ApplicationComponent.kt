@@ -14,9 +14,7 @@ interface ApplicationComponent {
 
     fun inject(activity: MainActivity)
 
-    fun getViewModel(): ExampleViewModel
 
-    fun getDatabase(): ExampleDatabase
 
     @Component.Factory
     interface ApplicationComponentFactory {

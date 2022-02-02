@@ -6,7 +6,7 @@ import javax.inject.Inject
 class ExampleApiService @Inject constructor(private val time: Long){
 
     fun method() {
-        Log.d(LOG_TAG, "ExampleApiService $time")
+        Log.d(LOG_TAG, "ExampleApiService  $this")
     }
 
     companion object {
