@@ -12,7 +12,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewModel: ExampleViewModel
 
     private val component by lazy {
-        DaggerApplicationComponent.builder().context(this).build()
+        DaggerApplicationComponent.builder().context(this).timeInMillis(System.currentTimeMillis())
+            .build()
     }
 
 
