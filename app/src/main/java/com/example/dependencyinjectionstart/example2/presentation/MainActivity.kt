@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dependencyinjectionstart.R
+import com.example.dependencyinjectionstart.example2.ExampleApplication
 import com.example.dependencyinjectionstart.example2.di.DaggerApplicationComponent
 import javax.inject.Inject
 
@@ -12,11 +13,9 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var viewModel: ExampleViewModel
 
-
     private val component by lazy {
-        DaggerApplicationComponent.factory().create(this, System.currentTimeMillis())
+        (application as ExampleApplication).component
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         component.inject(this)
