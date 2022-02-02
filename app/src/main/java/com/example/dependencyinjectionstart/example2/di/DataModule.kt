@@ -7,18 +7,19 @@ import com.example.dependencyinjectionstart.example2.data.datasource.ExampleRemo
 import com.example.dependencyinjectionstart.example2.data.datasource.ExampleRemoteDataSourceImpl
 import dagger.Module
 import dagger.Provides
+import javax.inject.Qualifier
 
 
 @Module
 class DataModule {
 
-
-
+    @ApplicationScope
     @Provides
     fun bindLocalDataSource(impl: ExampleLocalDataSourceImpl): ExampleLocalDataSource {
         return impl
     }
 
+    @ApplicationScope
     @Provides
     fun provideRemoteDataSource(impl: ExampleRemoteDataSourceImpl): ExampleRemoteDataSource {
         return impl
