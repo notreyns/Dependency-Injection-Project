@@ -4,7 +4,9 @@ import android.content.Context
 import android.util.Log
 import com.example.dependencyinjectionstart.R
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class ExampleDatabase @Inject constructor(
     private val context: Context
     ) {
