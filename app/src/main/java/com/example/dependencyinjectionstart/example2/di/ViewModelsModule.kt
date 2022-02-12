@@ -12,7 +12,7 @@ import dagger.multibindings.StringKey
 interface ViewModelsModule {
 
     @IntoMap
-    @StringKey("ExampleViewModel")
+    @ViewModelKey(ExampleViewModel::class)
     @Binds
     fun bindViewModel(viewModel: ExampleViewModel): ViewModel
 
